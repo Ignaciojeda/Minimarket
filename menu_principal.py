@@ -14,7 +14,7 @@ root = tk.Tk()
 root.title("Minimarket - Menú Principal")
 root.geometry("400x400")
 
-tk.Label(root, text="SISTEMA DE VENTAS MINIMARKET", font=("Arial", 16)).pack(pady=20)
+tk.Label(root, text="MINIMARKET BRECAS", font=("Arial", 16)).pack(pady=20)
 
 btn1 = tk.Button(root, text="🆕 Ingreso de productos", width=30, height=2,
                  command=lambda: abrir_script("ingreso_productos.py"))
