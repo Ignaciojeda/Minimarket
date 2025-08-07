@@ -2,6 +2,7 @@ import sqlite3
 import tkinter as tk
 from tkinter import messagebox
 
+
 def consultar_precio(event=None):
     codigo = entry_codigo.get()
     
@@ -28,6 +29,8 @@ def consultar_precio(event=None):
 # GUI
 root = tk.Tk()
 root.title("Consulta de Precio")
+# Tamaño ventana
+root.geometry("800x600")
 
 tk.Label(root, text="Escanea el código de barras").pack(pady=10)
 

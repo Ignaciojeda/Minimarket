@@ -63,7 +63,9 @@ def limpiar_campos():
 # GUI
 root = tk.Tk()
 root.title("Modificar Producto")
-
+# Tamaño ventana
+root.geometry("800x600")
+root.grid_columnconfigure(1, weight=1)
 tk.Label(root, text="Código de Barras:").grid(row=0, column=0, padx=5, pady=5)
 entry_codigo = tk.Entry(root)
 entry_codigo.grid(row=0, column=1)

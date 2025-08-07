@@ -38,30 +38,34 @@ def guardar_producto():
 # Crear ventana
 root = tk.Tk()
 root.title("Ingreso de Productos")
+# Tamaño ventana
+root.geometry("800x600")
+root.grid_columnconfigure(1, weight=1)
+# Configurar la columna 1 para que se expanda con el tamaño de la ventana
+root.grid_columnconfigure(1, weight=1)
 
-# Campos de entrada
-tk.Label(root, text="Código de Barras *").grid(row=0, column=0, sticky="e")
+# Etiquetas y Entradas
+tk.Label(root, text="Código de Barras *").grid(row=0, column=0, sticky="w", padx=5, pady=5)
 entry_codigo = tk.Entry(root)
-entry_codigo.grid(row=0, column=1)
+entry_codigo.grid(row=0, column=1, sticky="ew", padx=5, pady=5)
 
-tk.Label(root, text="Nombre *").grid(row=1, column=0, sticky="e")
+tk.Label(root, text="Nombre *").grid(row=1, column=0, sticky="w", padx=5, pady=5)
 entry_nombre = tk.Entry(root)
-entry_nombre.grid(row=1, column=1)
+entry_nombre.grid(row=1, column=1, sticky="ew", padx=5, pady=5)
 
-tk.Label(root, text="Precio *").grid(row=2, column=0, sticky="e")
+tk.Label(root, text="Precio *").grid(row=2, column=0, sticky="w", padx=5, pady=5)
 entry_precio = tk.Entry(root)
-entry_precio.grid(row=2, column=1)
+entry_precio.grid(row=2, column=1, sticky="ew", padx=5, pady=5)
 
-tk.Label(root, text="Stock *").grid(row=3, column=0, sticky="e")
+tk.Label(root, text="Stock *").grid(row=3, column=0, sticky="w", padx=5, pady=5)
 entry_stock = tk.Entry(root)
-entry_stock.grid(row=3, column=1)
+entry_stock.grid(row=3, column=1, sticky="ew", padx=5, pady=5)
 
-tk.Label(root, text="Descripción").grid(row=4, column=0, sticky="e")
+tk.Label(root, text="Descripción").grid(row=4, column=0, sticky="w", padx=5, pady=5)
 entry_descripcion = tk.Entry(root)
-entry_descripcion.grid(row=4, column=1)
+entry_descripcion.grid(row=4, column=1, sticky="ew", padx=5, pady=5)
 
-# Botón para guardar
 btn_guardar = tk.Button(root, text="Guardar Producto", command=guardar_producto)
-btn_guardar.grid(row=5, column=0, columnspan=2, pady=10)
+btn_guardar.grid(row=5, column=0, columnspan=2, pady=15)
 
 root.mainloop()

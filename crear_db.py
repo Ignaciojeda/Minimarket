@@ -37,6 +37,8 @@ CREATE TABLE IF NOT EXISTS detalle_venta (
 )
 """)
 
+
+
 conn.commit()
 conn.close()
 
